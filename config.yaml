@@ -1,0 +1,81 @@
+news_sources:
+  # Quotidiani nazionali italiani
+  corriere_della_sera:
+    name: "Corriere della Sera"
+    url: "https://xml2.corriereobjects.it/rss/homepage.xml"
+    language: "it"
+    category: "nazionale"
+    max_articles: 5
+
+  repubblica:
+    name: "La Repubblica"
+    url: "https://www.repubblica.it/rss/homepage/rss2.0.xml"
+    language: "it"
+    category: "nazionale"
+    max_articles: 5
+
+  il_messaggero:
+    name: "Il Messaggero"
+    url: "https://www.ilmessaggero.it/rss/home.xml"
+    language: "it"
+    category: "nazionale"
+    max_articles: 5
+
+  la_stampa:
+    name: "La Stampa"
+    url: "https://www.lastampa.it/rss"
+    language: "it"
+    category: "nazionale"
+    max_articles: 5
+
+  # Quotidiani sardi
+  unione_sarda:
+    name: "L'Unione Sarda"
+    url: "https://www.unionesarda.it/rss/"
+    language: "it"
+    category: "sardo"
+    max_articles: 5
+
+  la_nuova_sardegna:
+    name: "La Nuova Sardegna"
+    url: "https://www.lanuovasardegna.it/rss/"
+    language: "it"
+    category: "sardo"
+    max_articles: 5
+
+  # Internazionale
+  the_times:
+    name: "The Times"
+    url: "https://feeds.thetimes.co.uk/rss/thetimes/news"
+    language: "en"
+    category: "internazionale"
+    max_articles: 5
+
+  # HackerNews (tecnologia)
+  hackernews:
+    name: "HackerNews"
+    url: "https://hnrss.org/newest"
+    language: "en"
+    category: "tecnologia"
+    max_articles: 10
+
+# Configurazione email
+email:
+  recipient: "riccardo.mattu@aidaptsrl.com"
+  sender_name: "News Digest Bot"
+  subject_prefix: "[News Digest]"
+
+# Configurazione audio
+audio:
+  tts_engine: "gTTS"
+  voice_language: "it"
+  voice_gender: "female"
+  style: "neutral"
+  duration_per_digest: "90"
+
+# Configurazione workflow
+workflow:
+  name: "news_digest_workflow"
+  version: "1.0.0"
+  trigger: "cli"
+  one_shot: true
